@@ -10,6 +10,8 @@ available for public use.  The intent is to bring cutting-edge software
 solutions to life, empowering businesses and the scientific community with
 powerful, scalable, and user-friendly applications.
 
+<img alt="Alt Text" width="35" src="https://github.com/user-attachments/assets/ed902654-288c-45f6-b0ae-fc55d39d8f1a">https://github.com/basavaakula/ScyLab-Tools/releases
+
 <img alt="Alt Text" width="35" src="https://github.com/user-attachments/assets/2143efa4-7d8c-4a26-88b0-01aaf7e62616">https://www.youtube.com/@ScyLab-Tools
 
 <img alt="Linkedin" width="35" src="https://github.com/user-attachments/assets/ab96d2d4-81c6-4e93-a76d-14b652c7d80e">https://www.linkedin.com/company/scylab
