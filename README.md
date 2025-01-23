@@ -2,7 +2,7 @@
 <img alt="ScyLab" width="300" src="https://github.com/user-attachments/assets/677df6fb-3a89-4cdc-a679-e012f4adc0cd">
 </p>
 
-Welcome to <img alt="ScyLab" width="40" src="https://github.com/user-attachments/assets/7b3ff953-7dfc-47f5-bb32-2531fd2b3ef3">
+<!-- Welcome to <img alt="ScyLab" width="40" src="https://github.com/user-attachments/assets/7b3ff953-7dfc-47f5-bb32-2531fd2b3ef3"> -->
 This repository showcases innovative software projects and tools developed using modern technologies such as Python, C++, WebAssembly, HTML, and web design. Here, you’ll find updates, project details, and resources for tools that are available for public use.  
 
 📫 Checkout ...
