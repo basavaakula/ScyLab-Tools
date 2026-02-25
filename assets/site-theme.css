@@ -1,0 +1,134 @@
+/* Site-wide theme variables and reusable components for VU-VERSE docs */
+:root{
+  --bg: #ffffff;
+  --text: #0f172a;
+  --muted: #475569;
+  --card-bg: rgba(255,255,255,0.06);
+  --card-border: rgba(2,6,23,0.08);
+  --hero-gradient: linear-gradient(90deg, #626669 0%, #e68014 100%);
+  --accent: #0b5ea8;
+  --code-bg: rgba(2,6,23,0.02);
+  --font-sans: 'Roboto', system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial;
+}
+
+/* Dark theme variables */
+.theme-dark {
+  --bg: #1f1f1f;
+  --text: #e6e6e6;
+  --muted: #9aa6b2;
+  --card-bg: rgba(255,255,255,0.03);
+  --card-border: rgba(255,255,255,0.06);
+  /* --hero-gradient: linear-gradient(90deg,#183247 0%, #2f3b38 100%); */
+  /* --hero-gradient: linear-gradient(90deg, #0b5ea8 0%, #41cd52 100%); */
+  --hero-gradient: linear-gradient(90deg, #626669 0%, #e68014 100%);
+  --accent: #9ec5ff;
+  --code-bg: rgba(255,255,255,0.03);
+}
+
+/* Base */
+html,body{background:var(--bg);color:var(--text);font-family:var(--font-sans);line-height:1.5}
+
+/* Hero */
+.hero{background:var(--hero-gradient);color:white;padding:32px;border-radius:12px;margin-bottom:18px}
+.hero h1{margin:0 0 6px 0;font-size:2.4rem}
+.hero p.lead{margin:0;opacity:0.95}
+
+/* CTA */
+.cta{display:flex;gap:12px;align-items:center}
+.cta a.btn{background:rgba(255,255,255,0.12);color:white;padding:10px 14px;border-radius:8px;text-decoration:none;font-weight:600}
+
+/* Tech row */
+.tech-row{display:flex;gap:12px;align-items:center;margin-top:12px}
+.tech-row img{height:44px;border-radius:6px;background:rgba(255,255,255,0.06);padding:6px}
+
+/* Mermaid container tweaks for better visuals */
+.mermaid{max-width:100%;margin:18px auto;padding:12px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.00));box-shadow:0 10px 30px rgba(2,6,23,0.06);border:1px solid rgba(2,6,23,0.04)}
+.mermaid svg{width:100%!important;height:auto!important}
+
+/* Allow images embedded in Mermaid HTML labels to size and align */
+.mermaid img{height:40px;vertical-align:middle;margin-right:8px}
+.mermaid .nodeLabel, .mermaid .label { dominant-baseline:middle }
+
+/* Increase Mermaid diagram font sizes for readability */
+.mermaid svg text { font-size: 42px !important; fill: var(--text) !important; }
+.mermaid svg tspan { font-size: 42px !important; }
+.mermaid svg .label, .mermaid svg .nodeLabel { font-size: 42px !important; font-weight: 800 !important; }
+.mermaid svg .edgeLabel, .mermaid svg .edgeLabel tspan { font-size: 26px !important; }
+.mermaid svg .titleText { font-size: 48px !important; font-weight: 900 !important; }
+
+/* Remove SVG scale to keep text crisp; rely on explicit font sizing above */
+.mermaid svg { transform-origin: 50% 50%; transform: none; }
+
+/* Card component */
+.card{background:var(--card-bg);backdrop-filter:blur(8px);border:1px solid var(--card-border);border-radius:10px;padding:18px;box-shadow:0 8px 24px rgba(2,6,23,0.04);color:var(--text);margin-bottom:12px}
+.card h3{margin:0 0 6px 0}
+.card p,.card li{margin-top:10px;color:var(--muted)}
+
+/* Heading logo helper: places a small logo to the left of section headings */
+.heading-with-logo{display:flex;align-items:center;gap:10px}
+.heading-with-logo .heading-logo{height:28px;width:auto;display:inline-block}
+.heading-with-logo h3{margin:0}
+
+/* Utility */
+.stacked{display:flex;flex-direction:column;gap:14px;margin-top:22px}
+
+/* Images */
+img{max-width:100%;height:auto}
+
+/* Code and pre */
+code, pre{background:var(--code-bg);padding:2px 6px;border-radius:4px}
+
+/* Theme toggle button baseline (can be extended by theme-toggle.css) */
+.theme-toggle-btn{background:rgba(0,0,0,0.04);border:1px solid rgba(0,0,0,0.06);padding:6px 8px;border-radius:6px;cursor:pointer}
+.theme-toggle-btn:hover{filter:brightness(1.05)}
+
+/* Accessibility: focus */
+.theme-toggle-btn:focus{outline:2px solid var(--accent);outline-offset:2px}
+
+/* Small responsive tweaks */
+@media (max-width:700px){.hero h1{font-size:1.6rem}.tech-row img{height:34px}}
+
+/* Remove unwanted gradient/overlay on the site title in dark mode and ensure readable color */
+.theme-dark .md-nav__title,
+.theme-dark .md-header-nav__title,
+.theme-dark .md-logo__link,
+.theme-dark .md-nav__title a,
+.theme-dark .md-header__title {
+  background: none !important;
+  background-image: none !important;
+  -webkit-background-clip: unset !important;
+  color: var(--text) !important;
+  text-shadow: none !important;
+}
+
+/* Also ensure the sidebar title uses our text color in both themes */
+.md-nav__title, .md-header-nav__title { color: var(--text) !important }
+
+/* Strong overrides to remove any residual background, borders, or pseudo-elements
+   around the site title/logo in the header or sidebar (covers both themes). */
+.md-sidebar .md-logo, .md-sidebar .md-logo__link, .md-header .md-logo__link,
+.md-nav__title, .md-header__title, .md-header-nav__title {
+  background: transparent !important;
+  background-image: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Remove decorative pseudo-elements that some themes add */
+.md-nav__title::before, .md-nav__title::after, .md-header__title::before, .md-header__title::after {
+  display: none !important;
+  content: none !important;
+  background: none !important;
+}
+
+/* Ensure the logo link area is transparent and uses site text color */
+.md-logo__link, .md-logo { background: transparent !important; color: var(--text) !important }
+
+/* Dark-mode explicit: no light gradient or outline */
+.theme-dark .md-sidebar .md-logo, .theme-dark .md-nav__title, .theme-dark .md-header__title {
+  background: transparent !important;
+  color: var(--text) !important;
+  border-color: transparent !important;
+}

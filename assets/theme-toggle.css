@@ -1,0 +1,12 @@
+.theme-toggle-btn { background: rgba(0,0,0,0.05); border: 1px solid rgba(0,0,0,0.06); padding:6px 8px; border-radius:6px; cursor:pointer; }
+.theme-toggle-btn:hover { filter: brightness(1.05); }
+/* Basic site-wide dark baseline (pages may provide finer-grained overrides) */
+.theme-dark body { background: #1f1f1f; color: #e6e6e6; }
+.theme-dark a { color: #9ec5ff; }
+.theme-dark code { background: rgba(255,255,255,0.04); color: #e6e6e6; }
+
+/* Social links placed beside the theme toggle */
+.top-right-social { display: inline-flex; gap: 8px; align-items: center; }
+.top-right-social a { display: inline-flex; width: 20px; height: 20px; color: inherit; text-decoration: none; }
+.top-right-social a svg { width: 20px; height: 20px; display: block; fill: currentColor; }
+.top-right-social a:hover { opacity: 0.9; }
